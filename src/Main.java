@@ -6,7 +6,7 @@ public class Main {
         Die terning2 = new Die();
         int sum;
 
-        //terning1.roll();
+        //terning1.roll();git
         //terning2.roll();
 
         sum = terning1.roll() + terning2.roll();
