@@ -2,26 +2,50 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        
-         Scanner scan = new Scanner(System.in);
-        boolean Player1, Player2;
 
-        System.out.println("Which player is it?");
+        boolean Player1Turn, Player2Turn;
 
-        System.out.println("Player 1");
-        
         Die terning1 = new Die();
         Die terning2 = new Die();
         int sum;
+        int player1Points = 0, player2Points = 0;
 
-        //terning1.roll();git
-        //terning2.roll();
+        while (player1Points < 40 && player2Points < 40){ // Køre loop så længe at begge spiller har under 40 points
 
-        sum = terning1.roll() + terning2.roll();
+            System.out.println("Player 1's turn:");
+            System.out.println();
 
-        System.out.println("Terning 1 viser: "+ terning1.getFaceValue());
-        System.out.println("Terning 2 viser: "+ terning2.getFaceValue());
-        System.out.println("Summen af terningernes værdi: "+ sum);
+            terning1.roll();
+            terning2.roll();
+
+            sum = terning1.roll() + terning2.roll();
+
+
+            System.out.println("Terning 1 viser: "+ terning1.getFaceValue() );
+            System.out.println("Terning 2 viser: "+ terning2.getFaceValue() );
+            System.out.println("Summen af terningernes værdi: "+ sum);
+            System.out.println();
+
+            player1Points += sum; // Tilføjer summen af terningerne til spiller 1' points
+            System.out.println("Player 1's samlede points: "+ player1Points);
+            System.out.println();
+            System.out.println();
+            System.out.println();
+        }
+
+
+
+        if (player1Points >= 40 && player2Points >= 40){
+            System.out.println("Det er uafgjort!");
+        }
+
+        else if(player1Points >= 40){
+            System.out.println("Player 1 vinder!");
+        }
+
+        else if (player2Points >= 40) {
+            System.out.println("Player 2 vinder!");
+        }
 
     }
 }
