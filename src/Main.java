@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,17 +10,21 @@ public class Main {
         int terningSum;
         int player1Points = 0, player2Points = 0;
 
+        Scanner scan = new Scanner(System.in);
+
         while (player1Points < 40 && player2Points < 40){ // Køre loop så længe at begge spiller har under 40 points
 
 
             if (playerTurn == true){
-                System.out.println("Player 1's turn:");
-                //System.out.println("Tryk for at kaste med terningerne");
-                //Scanner
+                System.out.println("Player 1's tur:");
+
             }
             else if (playerTurn == false){
-                System.out.println("Player 2's turn:");
+                System.out.println("Player 2's tur:");
             }
+
+            System.out.println("Tryk på 'Enter' for at kaste med terningerne");
+            scan.nextLine();
 
             System.out.println();
 
