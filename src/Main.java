@@ -2,6 +2,14 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
+        
+         Scanner scan = new Scanner(System.in);
+        boolean Player1, Player2;
+
+        System.out.println("Which player is it?");
+
+        System.out.println("Player 1");
+        
         Die terning1 = new Die();
         Die terning2 = new Die();
         int sum;
