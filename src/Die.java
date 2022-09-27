@@ -10,4 +10,5 @@ public class Die {
     int getFaceValue(){
         return faceValue;
     }
+
 }

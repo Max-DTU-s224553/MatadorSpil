@@ -7,10 +7,47 @@ public class Main {
         Die terning1 = new Die();
         Die terning2 = new Die();
         boolean playerTurn = true; // True betyder at det er player 1's tur, false er player 2's tur
-        int terningSum;
+
+        int testRollTimes = 1000;
+        double gennemsnit;
+        int terningSum = 0;
         int player1Points = 0, player2Points = 0;
 
         Scanner scan = new Scanner(System.in);
+
+// ******************************************************************************************************************************************************'
+                                     // Terning kast test start
+// ******************************************************************************************************************************************************'
+
+        System.out.println();
+        System.out.println("Fair terning beregning:");
+        System.out.println();
+
+        for (int i = 0; i < testRollTimes; i++){
+            terning1.roll();
+            terning2.roll();
+
+            terningSum += terning1.getFaceValue() + terning2.getFaceValue();
+
+            //System.out.print(terning1.getFaceValue() + " ");
+            //System.out.println(terning2.getFaceValue());
+            //System.out.println();
+        }
+        gennemsnit = ( (double)terningSum / (double)testRollTimes) / 2;
+        System.out.println("Den samlede gennemsnitlig værdi på et enkelt terningkast efter at kaste "+ testRollTimes + " gange er: "+ gennemsnit);
+        System.out.println();
+
+// ******************************************************************************************************************************************************'
+                                     // Terning kast test slut
+// ******************************************************************************************************************************************************'
+
+
+
+
+
+// ******************************************************************************************************************************************************'
+                                                       // Spil start
+// ******************************************************************************************************************************************************'
 
         while (player1Points < 40 && player2Points < 40){ // Køre loop så længe at begge spiller har under 40 points
 
@@ -73,6 +110,8 @@ public class Main {
         }
 
     }
+
+
 }
 
 // mohammad
