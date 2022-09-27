@@ -114,8 +114,5 @@ public class Main {
         }
 
     }
-// Amaanito
 
 }
-
-// mohammad
