@@ -21,7 +21,6 @@ public class Main {
 
         System.out.println();
         System.out.println("Fair terning beregning:");
-        System.out.println();
 
         for (int i = 0; i < testRollTimes; i++){
             terning1.roll();
@@ -34,7 +33,8 @@ public class Main {
             //System.out.println();
         }
         gennemsnit = ( (double)terningSum / (double)testRollTimes) / 2;
-        System.out.println("Den samlede gennemsnitlig værdi på et enkelt terningkast efter at kaste "+ testRollTimes + " gange er: "+ gennemsnit);
+        System.out.println("Den samlede gennemsnitlig værdi på et enkelt terningkast efter at kaste med spillet 2 terninger "+ testRollTimes + " gange er: "+ gennemsnit);
+        System.out.println();
         System.out.println();
 
 // ******************************************************************************************************************************************************'
@@ -49,15 +49,19 @@ public class Main {
                                                        // Spil start
 // ******************************************************************************************************************************************************'
 
+        System.out.println("Terning kast spil:");
+        System.out.println("Kast med 2 terninger. Den først spiller der får 40 points vinder!");
+        System.out.println();
+
         while (player1Points < 40 && player2Points < 40){ // Køre loop så længe at begge spiller har under 40 points
 
 
             if (playerTurn == true){
-                System.out.println("Player 1's tur:");
+                System.out.println("Spiller 1's tur:");
 
             }
             else if (playerTurn == false){
-                System.out.println("Player 2's tur:");
+                System.out.println("Spiller 2's tur:");
             }
 
             System.out.println("Tryk på 'Enter' for at kaste med terningerne");
@@ -79,13 +83,13 @@ public class Main {
 
             if (playerTurn == true){
                 player1Points += terningSum; // Tilføjer summen af terningerne til spiller 1' points
-                System.out.println("Player 1's samlede points: "+ player1Points);
+                System.out.println("Spiller 1's samlede points: "+ player1Points);
                 playerTurn = false;
             }
 
             else if (playerTurn == false) {
                 player2Points += terningSum; // Tilføjer summen af terningerne til spiller 2' points
-                System.out.println("Player 2's samlede points: "+ player2Points);
+                System.out.println("Spiller 2's samlede points: "+ player2Points);
                 playerTurn = true;
             }
 
@@ -102,11 +106,11 @@ public class Main {
         }
 
         else if(player1Points >= 40){
-            System.out.println("Player 1 vinder!");
+            System.out.println("Spiller 1 vinder!");
         }
 
         else if (player2Points >= 40) {
-            System.out.println("Player 2 vinder!");
+            System.out.println("Spiller 2 vinder!");
         }
 
     }
