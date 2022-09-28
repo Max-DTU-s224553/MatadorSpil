@@ -112,6 +112,8 @@ public class Main {
         else if (player2Points >= 40) {
             System.out.println("Spiller 2 vinder!");
         }
+        
+        //øndring
 
     }
 
