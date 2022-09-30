@@ -113,7 +113,7 @@ public class Main {
             System.out.println("Spiller 2 vinder!");
         }
         
-        // Ændring
+        
 
     }
 
